@@ -53,15 +53,15 @@ export default function SignatureDish() {
               <p className="mt-3 max-w-xl font-serif text-lg italic leading-relaxed text-cream-50/85 sm:text-xl">
                 {dish.description}
               </p>
-              <div className="mt-7 flex flex-wrap gap-3">
-                <Button href={`/menu/${dish.slug}`} variant="light" size="md">
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <Button href={`/menu/${dish.slug}`} variant="light" size="md" className="w-full justify-center sm:w-auto">
                   View on menu <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
                 <a
                   href={waLink(waMessages.signature(dish.name))}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-cream-50/25 px-7 py-3.5 text-xs font-semibold uppercase tracking-wide text-cream-50 transition-colors hover:bg-cream-50 hover:text-espresso"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-cream-50/25 px-7 py-3.5 text-xs font-semibold uppercase tracking-wide text-cream-50 transition-colors hover:bg-cream-50 hover:text-espresso sm:w-auto"
                 >
                   <WhatsAppIcon className="h-4 w-4" /> Ask about it
                 </a>

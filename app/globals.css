@@ -44,6 +44,13 @@ body {
   overflow-x: hidden;
 }
 
+/* Reserve space for the fixed mobile bottom nav so final content/CTAs are not hidden. */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
+  }
+}
+
 ::selection {
   background: var(--butter);
   color: #2b160c;

@@ -85,7 +85,7 @@ export default function MenuQuickView({
               </div>
 
               {/* Details */}
-              <div className="flex flex-col p-6 sm:p-8">
+              <div className="flex flex-col p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] sm:p-8">
                 <span className="text-[11px] font-semibold uppercase tracking-huge text-terracotta">
                   {item.category}
                 </span>
