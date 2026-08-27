@@ -55,21 +55,23 @@ export function MobileBottomNav() {
           animate={{ y: 0 }}
           exit={{ y: 90 }}
           transition={{ type: "spring", stiffness: 220, damping: 26 }}
-          className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-3 gap-1.5 border-t border-espresso/10 bg-cream-50/95 p-3 pb-[max(0.85rem,env(safe-area-inset-bottom))] shadow-[0_-12px_40px_-20px_rgba(43,22,12,0.4)] backdrop-blur-xl md:hidden"
+          className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-[repeat(3,minmax(0,1fr))] gap-1.5 border-t border-espresso/10 bg-cream-50/95 px-2 py-2 pb-[max(0.75rem,env(safe-area-inset-bottom))] shadow-[0_-12px_40px_-20px_rgba(43,22,12,0.4)] backdrop-blur-xl sm:gap-2 sm:px-3 sm:py-3 md:hidden"
         >
-          <a href={tabs[0].href} className="flex flex-1 flex-col items-center justify-center gap-0.5 rounded-xl bg-espresso/5 py-2.5 text-xs font-bold uppercase tracking-wide text-espresso">
-            {tabs[0].label}
+          <a href={tabs[0].href} className="flex min-w-0 items-center justify-center overflow-hidden rounded-xl bg-espresso/5 px-2 py-2.5 text-[11px] font-bold uppercase tracking-wide text-espresso sm:text-xs">
+            <span className="truncate">{tabs[0].label}</span>
           </a>
-          <a href={tabs[1].href} className="flex flex-1 flex-col items-center justify-center gap-0.5 rounded-xl bg-terracotta py-2.5 text-xs font-bold uppercase tracking-wide text-cream-50 shadow-soft">
-            {tabs[1].label}
+          <a href={tabs[1].href} className="flex min-w-0 items-center justify-center overflow-hidden rounded-xl bg-terracotta px-2 py-2.5 text-[11px] font-bold uppercase tracking-wide text-cream-50 shadow-soft sm:text-xs">
+            <span className="truncate">{tabs[1].label}</span>
           </a>
           <a
             href={waLink(waMessages.general)}
             target="_blank"
             rel="noreferrer"
-            className="flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-sage-500/15 py-2.5 text-xs font-bold uppercase tracking-wide text-sage-700"
+            className="flex min-w-0 items-center justify-center gap-1 overflow-hidden rounded-xl bg-sage-500/15 px-2 py-2.5 text-[11px] font-bold uppercase tracking-wide text-sage-700 sm:gap-1.5 sm:text-xs"
           >
-            <WhatsAppIcon className="h-4 w-4 shrink-0" /> WhatsApp
+            <WhatsAppIcon className="h-4 w-4 shrink-0" />
+            <span className="truncate max-[360px]:hidden">WhatsApp</span>
+            <span className="hidden truncate max-[360px]:inline">WA</span>
           </a>
         </motion.nav>
       )}
