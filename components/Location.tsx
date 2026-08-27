@@ -70,7 +70,7 @@ export default function Location() {
               order something worth the trip, and make it your regular spot.
             </p>
 
-            <div className="mt-8 grid grid-cols-2 gap-4">
+            <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="rounded-2xl bg-cream-50 p-4 ring-1 ring-espresso/10 sm:p-5">
                 <p className="font-display text-2xl font-extrabold text-espresso sm:text-3xl">BAWADIYA</p>
                 <p className="font-display text-2xl font-extrabold text-espresso/40 sm:text-3xl">KALAN</p>
